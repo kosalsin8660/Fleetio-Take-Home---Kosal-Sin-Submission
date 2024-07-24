@@ -17,7 +17,7 @@ Page Objects Folder - Contains the Page Objects & Base Screen for those Page Obj
 
 Helpers - Contains a helper to set times for various waits 
 
-Extensions - Contains extensions of XCUIApplication, XCUIElementQuery, & XCUIElement to help with 
+Extensions - Contains extensions of XCUIApplication, XCUIElementQuery, & XCUIElement to help with test stability & readability as the application scales 
 
 Each Page Object inherits the ability to check for the existence of all of the bottom nav bar elements(Home, Browse, Notification, Search).
 
