@@ -7,7 +7,7 @@ Instructions to Run The XCUITests
 3. Find the Tests folder and run the FleetioGoUITests file
  
 
-Here is a detailed overview of the contents in the repository. Focus on all the files within the fleetio-go-e2e-sampleUITests, those contain all my changes.
+Here is a detailed overview of the contents in the repository. Focus on all the files within the fleetio-go-e2e-sampleUITests folder, those contain all my changes.
 
 Tests Folder  - Contains the main Test Class to run the iOS End to End Tests From
 
