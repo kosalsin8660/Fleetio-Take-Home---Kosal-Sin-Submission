@@ -1,6 +1,6 @@
 UI Test Automation using XCUITest Framework on Fleetio Go iOS app
 
-Please download Xcode & run the FleetioGoUITests Test Class located within the Tests folder 
+Please go to Xcode on your local marchine & run the FleetioGoUITests Test Class located within the Tests folder 
 
 Here is an overview of the contents in the repository
 
