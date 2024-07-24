@@ -21,11 +21,11 @@ Extensions - Contains extensions of XCUIApplication, XCUIElementQuery, & XCUIEle
 
 Each Page Object inherits the ability to check for the existence of all of the bottom nav bar elements(Home, Browse, Notification, Search).
 
-Those are buttons I idenified as critical buttons in the app so the automation will always check for the presence of those when navigating to a new page & fail if any aren't present.
+Those are buttons I identified as critical buttons in the app so the automation will always check for the presence of those when navigating to a new page & fail if any aren't present.
 
-The Swipe Up Extension I added is also helpful for larger lists and  elements that aren't immediately visible.
+The Swipe Up Extension I added is also helpful for larger lists and elements that aren't immediately visible.
 
-It also helps to account for the subtle differences that may occur across different real devices & simulators.
+It also helps to account for the subtle differences that may occur across different real devices & simulators, rather than using a generic swipe up.
 
 I also added other extensions to the code that I have written from my previous roles as an iOS SDET which will be useful as the application scales.
 
