@@ -10,9 +10,13 @@ Instructions to Run The XCUITests
 Here is a detailed overview of the contents in the repository. Focus on all the files within the fleetio-go-e2e-sampleUITests, those contain all my changes.
 
 Tests Folder  - Contains the main Test Class to run the iOS End to End Tests From
+
 Common Folder - Contains the Base Test Class & the Test Logins 
+
 Page Objects Folder - Contains the Page Objects & Base Screen for those Page Objects 
+
 Helpers - Contains a helper to set times for various waits 
+
 Extensions - Contains extensions of XCUIApplication, XCUIElementQuery, & XCUIElement to help with 
 
 Each Page Object inherits the ability to check for the existence of all of the bottom nav bar elements(Home, Browse, Notification, Search).
