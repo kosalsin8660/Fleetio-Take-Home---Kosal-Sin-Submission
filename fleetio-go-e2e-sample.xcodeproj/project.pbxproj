@@ -1,0 +1,790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5569B8342C4ABB820018A4F5 /* fleetio_go_e2e_sampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8332C4ABB820018A4F5 /* fleetio_go_e2e_sampleApp.swift */; };
+		5569B8362C4ABB820018A4F5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8352C4ABB820018A4F5 /* RootView.swift */; };
+		5569B8382C4ABB830018A4F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5569B8372C4ABB830018A4F5 /* Assets.xcassets */; };
+		5569B83C2C4ABB830018A4F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5569B83B2C4ABB830018A4F5 /* Preview Assets.xcassets */; };
+		5569B8462C4ABB830018A4F5 /* fleetio_go_e2e_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8452C4ABB830018A4F5 /* fleetio_go_e2e_sampleTests.swift */; };
+		5569B8502C4ABB830018A4F5 /* FleetioGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B84F2C4ABB830018A4F5 /* FleetioGoUITests.swift */; };
+		5569B8522C4ABB830018A4F5 /* fleetio_go_e2e_sampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8512C4ABB830018A4F5 /* fleetio_go_e2e_sampleUITestsLaunchTests.swift */; };
+		5569B85F2C4ABC2B0018A4F5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B85E2C4ABC2B0018A4F5 /* LoginView.swift */; };
+		5569B8612C4ABCA00018A4F5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8602C4ABCA00018A4F5 /* HomeView.swift */; };
+		5569B8632C4ABD640018A4F5 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8622C4ABD640018A4F5 /* BrowseView.swift */; };
+		5569B8652C4AC1350018A4F5 /* VehicleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8642C4AC1350018A4F5 /* VehicleList.swift */; };
+		5569B8672C4AC14A0018A4F5 /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8662C4AC14A0018A4F5 /* VehicleView.swift */; };
+		5569B8692C4AC1E60018A4F5 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8682C4AC1E60018A4F5 /* SampleData.swift */; };
+		5569B86B2C4ACCED0018A4F5 /* FuelLogList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B86A2C4ACCED0018A4F5 /* FuelLogList.swift */; };
+		5569B86D2C4ACCF10018A4F5 /* FuelLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B86C2C4ACCF10018A4F5 /* FuelLogView.swift */; };
+		5569B86F2C4ACE740018A4F5 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B86E2C4ACE740018A4F5 /* Date+Extensions.swift */; };
+		5569B8712C4AD0BF0018A4F5 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8702C4AD0BF0018A4F5 /* Double+Extensions.swift */; };
+		5569B8732C4AD5B20018A4F5 /* FuelLogForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8722C4AD5B20018A4F5 /* FuelLogForm.swift */; };
+		5569B8762C4AD7810018A4F5 /* FormDateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8752C4AD7810018A4F5 /* FormDateField.swift */; };
+		5569B8782C4AD9950018A4F5 /* FormDoubleField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8772C4AD9950018A4F5 /* FormDoubleField.swift */; };
+		5569B87A2C4AD9C90018A4F5 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B8792C4AD9C90018A4F5 /* View+Extensions.swift */; };
+		5569B87C2C4ADE920018A4F5 /* FuelTypeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B87B2C4ADE920018A4F5 /* FuelTypeSelector.swift */; };
+		5569B87E2C4AED4E0018A4F5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B87D2C4AED4E0018A4F5 /* SearchBar.swift */; };
+		5569B8802C4AF02D0018A4F5 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569B87F2C4AF02D0018A4F5 /* AccessibilityIdentifiers.swift */; };
+		7D0F13452C4FF3D2009EAE4D /* XCUIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0F13442C4FF3D2009EAE4D /* XCUIApplication+Extensions.swift */; };
+		7D8FEE072C50181A00E7C37D /* BrowseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8FEE062C50181A00E7C37D /* BrowseScreen.swift */; };
+		7D8FEE092C501C9300E7C37D /* VehiclesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8FEE082C501C9300E7C37D /* VehiclesScreen.swift */; };
+		7D8FEE0B2C50212A00E7C37D /* XCUIElementQuery+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8FEE0A2C50212A00E7C37D /* XCUIElementQuery+Extensions.swift */; };
+		7D8FEE0D2C5025DD00E7C37D /* VehicleDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8FEE0C2C5025DD00E7C37D /* VehicleDetailsScreen.swift */; };
+		7D8FEE0F2C5025FF00E7C37D /* VehicleFuelLogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8FEE0E2C5025FE00E7C37D /* VehicleFuelLogScreen.swift */; };
+		7D8FEE112C50267400E7C37D /* AddFuelLogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8FEE102C50267400E7C37D /* AddFuelLogScreen.swift */; };
+		7D8FEE132C5026A900E7C37D /* SelectFuelTypeForNewFuelLogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8FEE122C5026A900E7C37D /* SelectFuelTypeForNewFuelLogScreen.swift */; };
+		7DD87C6C2C4F3F3C00D9162F /* FleetioGoUITestsBaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87C6B2C4F3F3C00D9162F /* FleetioGoUITestsBaseClass.swift */; };
+		7DD87C722C4F425D00D9162F /* Timeouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87C712C4F425D00D9162F /* Timeouts.swift */; };
+		7DD87C742C4F428400D9162F /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87C732C4F428400D9162F /* XCUIElement+Extensions.swift */; };
+		7DD87C772C4F444400D9162F /* TestLogins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87C762C4F444400D9162F /* TestLogins.swift */; };
+		7DD87C7C2C4FC36C00D9162F /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87C7B2C4FC36C00D9162F /* BaseScreen.swift */; };
+		7DD87C7E2C4FC40200D9162F /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87C7D2C4FC40200D9162F /* LoginScreen.swift */; };
+		7DD87C802C4FC41400D9162F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87C7F2C4FC41400D9162F /* HomeScreen.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5569B8422C4ABB830018A4F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5569B8282C4ABB820018A4F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5569B82F2C4ABB820018A4F5;
+			remoteInfo = "fleetio-go-e2e-sample";
+		};
+		5569B84C2C4ABB830018A4F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5569B8282C4ABB820018A4F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5569B82F2C4ABB820018A4F5;
+			remoteInfo = "fleetio-go-e2e-sample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5569B8302C4ABB820018A4F5 /* fleetio-go-e2e-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fleetio-go-e2e-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5569B8332C4ABB820018A4F5 /* fleetio_go_e2e_sampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fleetio_go_e2e_sampleApp.swift; sourceTree = "<group>"; };
+		5569B8352C4ABB820018A4F5 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		5569B8372C4ABB830018A4F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5569B8392C4ABB830018A4F5 /* fleetio_go_e2e_sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fleetio_go_e2e_sample.entitlements; sourceTree = "<group>"; };
+		5569B83B2C4ABB830018A4F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5569B8412C4ABB830018A4F5 /* fleetio-go-e2e-sampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fleetio-go-e2e-sampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5569B8452C4ABB830018A4F5 /* fleetio_go_e2e_sampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fleetio_go_e2e_sampleTests.swift; sourceTree = "<group>"; };
+		5569B84B2C4ABB830018A4F5 /* fleetio-go-e2e-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fleetio-go-e2e-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5569B84F2C4ABB830018A4F5 /* FleetioGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetioGoUITests.swift; sourceTree = "<group>"; };
+		5569B8512C4ABB830018A4F5 /* fleetio_go_e2e_sampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fleetio_go_e2e_sampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5569B85E2C4ABC2B0018A4F5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5569B8602C4ABCA00018A4F5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5569B8622C4ABD640018A4F5 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
+		5569B8642C4AC1350018A4F5 /* VehicleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleList.swift; sourceTree = "<group>"; };
+		5569B8662C4AC14A0018A4F5 /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
+		5569B8682C4AC1E60018A4F5 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		5569B86A2C4ACCED0018A4F5 /* FuelLogList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelLogList.swift; sourceTree = "<group>"; };
+		5569B86C2C4ACCF10018A4F5 /* FuelLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelLogView.swift; sourceTree = "<group>"; };
+		5569B86E2C4ACE740018A4F5 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		5569B8702C4AD0BF0018A4F5 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		5569B8722C4AD5B20018A4F5 /* FuelLogForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelLogForm.swift; sourceTree = "<group>"; };
+		5569B8752C4AD7810018A4F5 /* FormDateField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDateField.swift; sourceTree = "<group>"; };
+		5569B8772C4AD9950018A4F5 /* FormDoubleField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDoubleField.swift; sourceTree = "<group>"; };
+		5569B8792C4AD9C90018A4F5 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		5569B87B2C4ADE920018A4F5 /* FuelTypeSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelTypeSelector.swift; sourceTree = "<group>"; };
+		5569B87D2C4AED4E0018A4F5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		5569B87F2C4AF02D0018A4F5 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
+		7D0F13442C4FF3D2009EAE4D /* XCUIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		7D8FEE062C50181A00E7C37D /* BrowseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseScreen.swift; sourceTree = "<group>"; };
+		7D8FEE082C501C9300E7C37D /* VehiclesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesScreen.swift; sourceTree = "<group>"; };
+		7D8FEE0A2C50212A00E7C37D /* XCUIElementQuery+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElementQuery+Extensions.swift"; sourceTree = "<group>"; };
+		7D8FEE0C2C5025DD00E7C37D /* VehicleDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailsScreen.swift; sourceTree = "<group>"; };
+		7D8FEE0E2C5025FE00E7C37D /* VehicleFuelLogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleFuelLogScreen.swift; sourceTree = "<group>"; };
+		7D8FEE102C50267400E7C37D /* AddFuelLogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFuelLogScreen.swift; sourceTree = "<group>"; };
+		7D8FEE122C5026A900E7C37D /* SelectFuelTypeForNewFuelLogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFuelTypeForNewFuelLogScreen.swift; sourceTree = "<group>"; };
+		7DD87C6B2C4F3F3C00D9162F /* FleetioGoUITestsBaseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetioGoUITestsBaseClass.swift; sourceTree = "<group>"; };
+		7DD87C712C4F425D00D9162F /* Timeouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeouts.swift; sourceTree = "<group>"; };
+		7DD87C732C4F428400D9162F /* XCUIElement+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extensions.swift"; sourceTree = "<group>"; };
+		7DD87C762C4F444400D9162F /* TestLogins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLogins.swift; sourceTree = "<group>"; };
+		7DD87C7B2C4FC36C00D9162F /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
+		7DD87C7D2C4FC40200D9162F /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		7DD87C7F2C4FC41400D9162F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5569B82D2C4ABB820018A4F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5569B83E2C4ABB830018A4F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5569B8482C4ABB830018A4F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5569B8272C4ABB820018A4F5 = {
+			isa = PBXGroup;
+			children = (
+				5569B8322C4ABB820018A4F5 /* fleetio-go-e2e-sample */,
+				5569B8442C4ABB830018A4F5 /* fleetio-go-e2e-sampleTests */,
+				5569B84E2C4ABB830018A4F5 /* fleetio-go-e2e-sampleUITests */,
+				5569B8312C4ABB820018A4F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5569B8312C4ABB820018A4F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5569B8302C4ABB820018A4F5 /* fleetio-go-e2e-sample.app */,
+				5569B8412C4ABB830018A4F5 /* fleetio-go-e2e-sampleTests.xctest */,
+				5569B84B2C4ABB830018A4F5 /* fleetio-go-e2e-sampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5569B8322C4ABB820018A4F5 /* fleetio-go-e2e-sample */ = {
+			isa = PBXGroup;
+			children = (
+				5569B8742C4AD7790018A4F5 /* Components */,
+				5569B8332C4ABB820018A4F5 /* fleetio_go_e2e_sampleApp.swift */,
+				5569B8352C4ABB820018A4F5 /* RootView.swift */,
+				5569B85E2C4ABC2B0018A4F5 /* LoginView.swift */,
+				5569B8602C4ABCA00018A4F5 /* HomeView.swift */,
+				5569B8622C4ABD640018A4F5 /* BrowseView.swift */,
+				5569B8642C4AC1350018A4F5 /* VehicleList.swift */,
+				5569B8662C4AC14A0018A4F5 /* VehicleView.swift */,
+				5569B86A2C4ACCED0018A4F5 /* FuelLogList.swift */,
+				5569B86C2C4ACCF10018A4F5 /* FuelLogView.swift */,
+				5569B8722C4AD5B20018A4F5 /* FuelLogForm.swift */,
+				5569B87B2C4ADE920018A4F5 /* FuelTypeSelector.swift */,
+				5569B8682C4AC1E60018A4F5 /* SampleData.swift */,
+				5569B87F2C4AF02D0018A4F5 /* AccessibilityIdentifiers.swift */,
+				5569B8372C4ABB830018A4F5 /* Assets.xcassets */,
+				5569B8392C4ABB830018A4F5 /* fleetio_go_e2e_sample.entitlements */,
+				5569B83A2C4ABB830018A4F5 /* Preview Content */,
+				5569B86E2C4ACE740018A4F5 /* Date+Extensions.swift */,
+				5569B8792C4AD9C90018A4F5 /* View+Extensions.swift */,
+				5569B8702C4AD0BF0018A4F5 /* Double+Extensions.swift */,
+			);
+			path = "fleetio-go-e2e-sample";
+			sourceTree = "<group>";
+		};
+		5569B83A2C4ABB830018A4F5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5569B83B2C4ABB830018A4F5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5569B8442C4ABB830018A4F5 /* fleetio-go-e2e-sampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				5569B8452C4ABB830018A4F5 /* fleetio_go_e2e_sampleTests.swift */,
+			);
+			path = "fleetio-go-e2e-sampleTests";
+			sourceTree = "<group>";
+		};
+		5569B84E2C4ABB830018A4F5 /* fleetio-go-e2e-sampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7D0F13432C4FE718009EAE4D /* Tests */,
+				7DD87C7A2C4FC35400D9162F /* Page Objects */,
+				7DD87C752C4F442F00D9162F /* Common */,
+				7DD87C702C4F41E600D9162F /* Helpers */,
+				7DD87C6F2C4F41D500D9162F /* Extensions */,
+				5569B8512C4ABB830018A4F5 /* fleetio_go_e2e_sampleUITestsLaunchTests.swift */,
+			);
+			path = "fleetio-go-e2e-sampleUITests";
+			sourceTree = "<group>";
+		};
+		5569B8742C4AD7790018A4F5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5569B8752C4AD7810018A4F5 /* FormDateField.swift */,
+				5569B8772C4AD9950018A4F5 /* FormDoubleField.swift */,
+				5569B87D2C4AED4E0018A4F5 /* SearchBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7D0F13432C4FE718009EAE4D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5569B84F2C4ABB830018A4F5 /* FleetioGoUITests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		7DD87C6F2C4F41D500D9162F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7DD87C732C4F428400D9162F /* XCUIElement+Extensions.swift */,
+				7D0F13442C4FF3D2009EAE4D /* XCUIApplication+Extensions.swift */,
+				7D8FEE0A2C50212A00E7C37D /* XCUIElementQuery+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7DD87C702C4F41E600D9162F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7DD87C712C4F425D00D9162F /* Timeouts.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7DD87C752C4F442F00D9162F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7DD87C6B2C4F3F3C00D9162F /* FleetioGoUITestsBaseClass.swift */,
+				7DD87C762C4F444400D9162F /* TestLogins.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7DD87C7A2C4FC35400D9162F /* Page Objects */ = {
+			isa = PBXGroup;
+			children = (
+				7DD87C7B2C4FC36C00D9162F /* BaseScreen.swift */,
+				7DD87C7D2C4FC40200D9162F /* LoginScreen.swift */,
+				7DD87C7F2C4FC41400D9162F /* HomeScreen.swift */,
+				7D8FEE062C50181A00E7C37D /* BrowseScreen.swift */,
+				7D8FEE082C501C9300E7C37D /* VehiclesScreen.swift */,
+				7D8FEE0C2C5025DD00E7C37D /* VehicleDetailsScreen.swift */,
+				7D8FEE0E2C5025FE00E7C37D /* VehicleFuelLogScreen.swift */,
+				7D8FEE102C50267400E7C37D /* AddFuelLogScreen.swift */,
+				7D8FEE122C5026A900E7C37D /* SelectFuelTypeForNewFuelLogScreen.swift */,
+			);
+			path = "Page Objects";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5569B82F2C4ABB820018A4F5 /* fleetio-go-e2e-sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5569B8552C4ABB830018A4F5 /* Build configuration list for PBXNativeTarget "fleetio-go-e2e-sample" */;
+			buildPhases = (
+				5569B82C2C4ABB820018A4F5 /* Sources */,
+				5569B82D2C4ABB820018A4F5 /* Frameworks */,
+				5569B82E2C4ABB820018A4F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fleetio-go-e2e-sample";
+			productName = "fleetio-go-e2e-sample";
+			productReference = 5569B8302C4ABB820018A4F5 /* fleetio-go-e2e-sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5569B8402C4ABB830018A4F5 /* fleetio-go-e2e-sampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5569B8582C4ABB830018A4F5 /* Build configuration list for PBXNativeTarget "fleetio-go-e2e-sampleTests" */;
+			buildPhases = (
+				5569B83D2C4ABB830018A4F5 /* Sources */,
+				5569B83E2C4ABB830018A4F5 /* Frameworks */,
+				5569B83F2C4ABB830018A4F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5569B8432C4ABB830018A4F5 /* PBXTargetDependency */,
+			);
+			name = "fleetio-go-e2e-sampleTests";
+			productName = "fleetio-go-e2e-sampleTests";
+			productReference = 5569B8412C4ABB830018A4F5 /* fleetio-go-e2e-sampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5569B84A2C4ABB830018A4F5 /* fleetio-go-e2e-sampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5569B85B2C4ABB830018A4F5 /* Build configuration list for PBXNativeTarget "fleetio-go-e2e-sampleUITests" */;
+			buildPhases = (
+				5569B8472C4ABB830018A4F5 /* Sources */,
+				5569B8482C4ABB830018A4F5 /* Frameworks */,
+				5569B8492C4ABB830018A4F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5569B84D2C4ABB830018A4F5 /* PBXTargetDependency */,
+			);
+			name = "fleetio-go-e2e-sampleUITests";
+			productName = "fleetio-go-e2e-sampleUITests";
+			productReference = 5569B84B2C4ABB830018A4F5 /* fleetio-go-e2e-sampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5569B8282C4ABB820018A4F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					5569B82F2C4ABB820018A4F5 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					5569B8402C4ABB830018A4F5 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 5569B82F2C4ABB820018A4F5;
+					};
+					5569B84A2C4ABB830018A4F5 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 5569B82F2C4ABB820018A4F5;
+					};
+				};
+			};
+			buildConfigurationList = 5569B82B2C4ABB820018A4F5 /* Build configuration list for PBXProject "fleetio-go-e2e-sample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5569B8272C4ABB820018A4F5;
+			productRefGroup = 5569B8312C4ABB820018A4F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5569B82F2C4ABB820018A4F5 /* fleetio-go-e2e-sample */,
+				5569B8402C4ABB830018A4F5 /* fleetio-go-e2e-sampleTests */,
+				5569B84A2C4ABB830018A4F5 /* fleetio-go-e2e-sampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5569B82E2C4ABB820018A4F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5569B83C2C4ABB830018A4F5 /* Preview Assets.xcassets in Resources */,
+				5569B8382C4ABB830018A4F5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5569B83F2C4ABB830018A4F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5569B8492C4ABB830018A4F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5569B82C2C4ABB820018A4F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5569B8712C4AD0BF0018A4F5 /* Double+Extensions.swift in Sources */,
+				5569B8652C4AC1350018A4F5 /* VehicleList.swift in Sources */,
+				5569B86F2C4ACE740018A4F5 /* Date+Extensions.swift in Sources */,
+				5569B8732C4AD5B20018A4F5 /* FuelLogForm.swift in Sources */,
+				5569B8672C4AC14A0018A4F5 /* VehicleView.swift in Sources */,
+				5569B87E2C4AED4E0018A4F5 /* SearchBar.swift in Sources */,
+				5569B85F2C4ABC2B0018A4F5 /* LoginView.swift in Sources */,
+				5569B87A2C4AD9C90018A4F5 /* View+Extensions.swift in Sources */,
+				5569B8782C4AD9950018A4F5 /* FormDoubleField.swift in Sources */,
+				5569B8762C4AD7810018A4F5 /* FormDateField.swift in Sources */,
+				5569B86D2C4ACCF10018A4F5 /* FuelLogView.swift in Sources */,
+				5569B87C2C4ADE920018A4F5 /* FuelTypeSelector.swift in Sources */,
+				5569B86B2C4ACCED0018A4F5 /* FuelLogList.swift in Sources */,
+				5569B8612C4ABCA00018A4F5 /* HomeView.swift in Sources */,
+				5569B8632C4ABD640018A4F5 /* BrowseView.swift in Sources */,
+				5569B8362C4ABB820018A4F5 /* RootView.swift in Sources */,
+				5569B8802C4AF02D0018A4F5 /* AccessibilityIdentifiers.swift in Sources */,
+				5569B8342C4ABB820018A4F5 /* fleetio_go_e2e_sampleApp.swift in Sources */,
+				5569B8692C4AC1E60018A4F5 /* SampleData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5569B83D2C4ABB830018A4F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5569B8462C4ABB830018A4F5 /* fleetio_go_e2e_sampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5569B8472C4ABB830018A4F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D8FEE0B2C50212A00E7C37D /* XCUIElementQuery+Extensions.swift in Sources */,
+				7DD87C722C4F425D00D9162F /* Timeouts.swift in Sources */,
+				7DD87C802C4FC41400D9162F /* HomeScreen.swift in Sources */,
+				7DD87C772C4F444400D9162F /* TestLogins.swift in Sources */,
+				7D8FEE112C50267400E7C37D /* AddFuelLogScreen.swift in Sources */,
+				7D8FEE0D2C5025DD00E7C37D /* VehicleDetailsScreen.swift in Sources */,
+				7DD87C6C2C4F3F3C00D9162F /* FleetioGoUITestsBaseClass.swift in Sources */,
+				7DD87C742C4F428400D9162F /* XCUIElement+Extensions.swift in Sources */,
+				7DD87C7E2C4FC40200D9162F /* LoginScreen.swift in Sources */,
+				5569B8522C4ABB830018A4F5 /* fleetio_go_e2e_sampleUITestsLaunchTests.swift in Sources */,
+				7D8FEE0F2C5025FF00E7C37D /* VehicleFuelLogScreen.swift in Sources */,
+				7D8FEE072C50181A00E7C37D /* BrowseScreen.swift in Sources */,
+				7D8FEE092C501C9300E7C37D /* VehiclesScreen.swift in Sources */,
+				7D8FEE132C5026A900E7C37D /* SelectFuelTypeForNewFuelLogScreen.swift in Sources */,
+				5569B8502C4ABB830018A4F5 /* FleetioGoUITests.swift in Sources */,
+				7DD87C7C2C4FC36C00D9162F /* BaseScreen.swift in Sources */,
+				7D0F13452C4FF3D2009EAE4D /* XCUIApplication+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5569B8432C4ABB830018A4F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5569B82F2C4ABB820018A4F5 /* fleetio-go-e2e-sample */;
+			targetProxy = 5569B8422C4ABB830018A4F5 /* PBXContainerItemProxy */;
+		};
+		5569B84D2C4ABB830018A4F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5569B82F2C4ABB820018A4F5 /* fleetio-go-e2e-sample */;
+			targetProxy = 5569B84C2C4ABB830018A4F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5569B8532C4ABB830018A4F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5569B8542C4ABB830018A4F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		5569B8562C4ABB830018A4F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "fleetio-go-e2e-sample/fleetio_go_e2e_sample.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"fleetio-go-e2e-sample/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tonyfang.fleetio-go-e2e-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5569B8572C4ABB830018A4F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "fleetio-go-e2e-sample/fleetio_go_e2e_sample.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"fleetio-go-e2e-sample/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tonyfang.fleetio-go-e2e-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5569B8592C4ABB830018A4F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tonyfang.fleetio-go-e2e-sampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fleetio-go-e2e-sample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/fleetio-go-e2e-sample";
+			};
+			name = Debug;
+		};
+		5569B85A2C4ABB830018A4F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tonyfang.fleetio-go-e2e-sampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fleetio-go-e2e-sample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/fleetio-go-e2e-sample";
+			};
+			name = Release;
+		};
+		5569B85C2C4ABB830018A4F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tonyfang.fleetio-go-e2e-sampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "fleetio-go-e2e-sample";
+			};
+			name = Debug;
+		};
+		5569B85D2C4ABB830018A4F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tonyfang.fleetio-go-e2e-sampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "fleetio-go-e2e-sample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5569B82B2C4ABB820018A4F5 /* Build configuration list for PBXProject "fleetio-go-e2e-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5569B8532C4ABB830018A4F5 /* Debug */,
+				5569B8542C4ABB830018A4F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5569B8552C4ABB830018A4F5 /* Build configuration list for PBXNativeTarget "fleetio-go-e2e-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5569B8562C4ABB830018A4F5 /* Debug */,
+				5569B8572C4ABB830018A4F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5569B8582C4ABB830018A4F5 /* Build configuration list for PBXNativeTarget "fleetio-go-e2e-sampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5569B8592C4ABB830018A4F5 /* Debug */,
+				5569B85A2C4ABB830018A4F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5569B85B2C4ABB830018A4F5 /* Build configuration list for PBXNativeTarget "fleetio-go-e2e-sampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5569B85C2C4ABB830018A4F5 /* Debug */,
+				5569B85D2C4ABB830018A4F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5569B8282C4ABB820018A4F5 /* Project object */;
+}
