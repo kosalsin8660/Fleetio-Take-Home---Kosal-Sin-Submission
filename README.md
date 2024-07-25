@@ -4,10 +4,12 @@ Instructions to Run The XCUITests
 
 1. Clone this repository on your local machine & access the fleetio-go-e2e-sample.xcodeproj project via Xcode
 2. Navigate to the fleetio-go-e2e-sampleUITests folder
-3. Find the Tests folder and run the FleetioGoUITests test class to execute the iOS UI Tests!
+3. Find the Tests folder & run the FleetioGoUITests test class to execute the iOS UI Tests!
  
 
-Here is a detailed overview of the contents in the repository. Focus on all the files within the fleetio-go-e2e-sampleUITests folder, those contain all my changes.
+Here is a detailed overview of the contents in the repository. Focus on all the files within the fleetio-go-e2e-sampleUITests folder, those contain the majority of my code.
+
+Subfolders within the fleetio-go-e2e-sampleUITests folder...
 
 Tests Folder  - Contains the main Test Class to run the iOS End to End Tests From
 
@@ -21,13 +23,13 @@ Extensions - Contains extensions of XCUIApplication, XCUIElementQuery, & XCUIEle
 
 Each Page Object inherits the ability to check for the existence of all of the bottom nav bar elements(Home, Browse, Notification, Search).
 
-Those are buttons I identified as critical buttons in the app so the automation will always check for the presence of those when navigating to a new page & fail if any aren't present.
+Those are buttons I identified as critical buttons in the app so the automation code will always check for the presence of those when navigating to a new page & fail if any aren't present.
 
-The Swipe Up Extension I added is also helpful for larger lists and elements that aren't immediately visible.
+The Swipe Up Extension I added is also helpful for larger lists & elements that aren't immediately visible.
 
-It also helps to account for the subtle differences that may occur across different real devices & simulators, rather than using a generic swipe up.
+It helps to account for the subtle differences that may occur across different real devices & simulators, rather than using a generic swipe up.
 
-I also added other extensions to the code that I have written from my previous roles as an iOS SDET which will be useful as the application scales.
+I also added other extensions to the code that I have written from my previous roles as an iOS SDET which will be useful in combating flakiness as the application scales.
 
 Don't hesitate to reach out with questions on this submission!
 
