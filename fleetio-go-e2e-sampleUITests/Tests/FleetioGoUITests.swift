@@ -16,8 +16,15 @@ final class FleetioGoUITests: FleetioGoUITestsBaseClass {
     var vehicleFuelLogScreen: VehicleFuelLogScreen!
     var addFuelLogScreen: AddFuelLogScreen!
     
-    var fuelEntryCountInitial: Int = 0
-    var fuelEntryCountAfterAdd: Int = 0
+    var numFuelElementsInitial: Int = 0
+    var numFuelElementsPostSave: Int = 0
+    
+    var inputtedPricePerGallon: String = ""
+    var actualSavedPricePerGallon: String = ""
+    
+    var inputtedGallons: String = ""
+    var actualSavedGallons: String = ""
+    
         
     override func setUp() {
         continueAfterFailure = false
@@ -39,18 +46,29 @@ final class FleetioGoUITests: FleetioGoUITestsBaseClass {
         
         vehicleFuelLogScreen = vehicleDetailsScreen.tapFuelLog()
         
-        fuelEntryCountInitial = vehicleFuelLogScreen.getFuelEntryCount()
+        numFuelElementsInitial = vehicleFuelLogScreen.verifyProperFuelEntryElementCount()
         
         addFuelLogScreen = vehicleFuelLogScreen.tapAddNewFuelLogButton()
         
         addFuelLogScreen = addFuelLogScreen.fillAddNewFuelFields()
         
+        inputtedPricePerGallon = addFuelLogScreen.getCurrentPricePerGallonValue()
+        
+        inputtedGallons = addFuelLogScreen.getCurrentGallonValue()
+        
         vehicleFuelLogScreen = addFuelLogScreen.saveNewFuelEntry()
         
-        fuelEntryCountAfterAdd = vehicleFuelLogScreen.getFuelEntryCount()
+        numFuelElementsPostSave = vehicleFuelLogScreen.verifyProperFuelEntryElementCount()
         
-        // The fuel entry count should be increased by 1 after save
-        XCTAssertEqual(fuelEntryCountAfterAdd, fuelEntryCountInitial + 1)
+        actualSavedPricePerGallon = vehicleFuelLogScreen.getSavedPerGallonValues()
+        
+        actualSavedGallons = vehicleFuelLogScreen.getSavedGallonValues()
+        
+        XCTAssertEqual(numFuelElementsPostSave, numFuelElementsInitial + 1)
+        
+        XCTAssertTrue(actualSavedPricePerGallon.hasSuffix(inputtedPricePerGallon))
+        
+        XCTAssertEqual(inputtedGallons, actualSavedGallons)
     }
     
     func testRequiredFieldsNotFilledNewFuelEntry() {

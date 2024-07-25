@@ -11,7 +11,7 @@ import XCTest
 extension XCUIApplication {
     
     // Useful swipe up extension for pages with long lists, where the element may initially not be hittable
-    @discardableResult func swipeUp(untilHittable element: XCUIElement, maxNumSwipes: Int = 10, swipeVelocity: XCUIGestureVelocity = 700) -> Bool {
+    @discardableResult func swipeUp(untilHittable element: XCUIElement, maxNumSwipes: Int = 10, swipeVelocity: XCUIGestureVelocity = 1500) -> Bool {
         if element.isHittable {
                 return true
         } else {

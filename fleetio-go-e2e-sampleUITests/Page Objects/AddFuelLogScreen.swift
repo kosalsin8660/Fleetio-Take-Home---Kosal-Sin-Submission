@@ -24,6 +24,9 @@ class AddFuelLogScreen: BaseScreen {
     
     private lazy var requiredFieldsError = app.staticTexts.matching(identifier: "validation_message").firstMatch
     
+    private lazy var pricePerGallonAmount = pricePerGallon.value!
+    private lazy var gallonsAmount = gallons.value!
+    
     func fillAddNewFuelFields() -> AddFuelLogScreen {
     
         XCTAssertTrue(pricePerGallon.waitForExistence(timeout: .small))
@@ -32,7 +35,7 @@ class AddFuelLogScreen: BaseScreen {
         XCTAssertTrue(tripMiles.waitForExistence(timeout: .small))
         XCTAssertTrue(odoMeter.waitForExistence(timeout: .small))
         
-        let numericNewFuelLogInputs: [XCUIElement]  = [pricePerGallon, gallons,tripMiles, odoMeter]
+        let numericNewFuelLogInputs: [XCUIElement] = [pricePerGallon, gallons,tripMiles, odoMeter]
         
         for element in numericNewFuelLogInputs {
             let randomNumber = Int.random(in: 25..<1000)
@@ -43,12 +46,18 @@ class AddFuelLogScreen: BaseScreen {
         
           return tapGasTypeField().selectAndSaveGasType(gasType: "Flex Fuel")
   }
-    
 
+    func getCurrentPricePerGallonValue() -> String {
+        return toString(pricePerGallonAmount)
+    }
+    
+    func getCurrentGallonValue() -> String {
+        return toString(gallonsAmount)
+    }
+    
     func saveNewFuelEntry() -> VehicleFuelLogScreen {
         XCTAssertTrue(saveButton.waitForExistence(timeout: .small))
         saveButton.tap()
-        XCTAssertFalse(requiredFieldsError.waitForExistence(timeout: .small))
         return VehicleFuelLogScreen()
     }
     

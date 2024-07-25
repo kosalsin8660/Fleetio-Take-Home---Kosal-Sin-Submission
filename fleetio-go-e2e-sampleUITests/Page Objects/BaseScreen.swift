@@ -39,4 +39,8 @@ class BaseScreen {
         XCTAssertTrue(keyboard.waitForExistence(timeout: .medium))
         keyboard.tap()
     }
+    
+    func toString(_ value: Any?) -> String {
+      return String(describing: value ?? "")
+    }
 }

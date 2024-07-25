@@ -13,8 +13,9 @@ class VehiclesScreen: BaseScreen {
         super.init()
         self.verifyNavElements()
     }
+    
     func selectVehicleName(vehicleName: String) -> VehicleDetailsScreen {
-        let vehicleToSelect = app.buttons.softMatching(substring: vehicleName).first!
+        let vehicleToSelect = app.buttons.softMatchingLabel(substring: vehicleName).first!
         XCTAssertTrue(vehicleToSelect.waitForExistence(timeout: .medium))
         vehicleToSelect.tap()
         return VehicleDetailsScreen()

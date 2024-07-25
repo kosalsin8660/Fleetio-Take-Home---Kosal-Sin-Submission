@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
-  
+  //Added some identifiers to this View Controller
   var body: some View {
     TabView {
       Image("fleetio-logo")

@@ -16,9 +16,16 @@ extension XCUIElementQuery {
         // NSPredicate will use `label CONTAINS[c] %@` format.
         case fuzzy
     }
-    func softMatching(substring: String) -> [XCUIElement] {
+    
+    func softMatchingLabel(substring: String) -> [XCUIElement] {
         return self.allElementsBoundByIndex.filter { $0.label.contains(substring) }
     }
+    
+    func softMatchingIdentifier(substring: String) -> [XCUIElement] {
+        return self.allElementsBoundByIndex.filter { $0.identifier.contains(substring) }
+    }
+    
+    
     /// Searches for all elements matching a given label.
     /// - Parameter label: The string label to match against.
     /// - Parameter matchType: The type of search to perform for the element.
@@ -30,6 +37,11 @@ extension XCUIElementQuery {
                 label
             )
         )
+    }
+    
+    func getButtonPartialMatchOnIdentifier(text: String) -> [XCUIElement] {
+        let predicate = NSPredicate(format: "identifier CONTAINS %@", text)
+        return matching(predicate).allElementsBoundByIndex
     }
 
 }
