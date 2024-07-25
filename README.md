@@ -15,7 +15,7 @@ Tests Folder  - Contains the main Test Class to run the iOS End to End Tests Fro
 
 Common Folder - Contains the Base Test Class & the Test Logins 
 
-Page Objects Folder - Contains the Page Objects & Base Screen for those Page Objects 
+Page Objects Folder - Contains the Page Objects & Base Screen for those Page Objects. I put some useful helper methods into the Base Screen which makes those accessible across all Page Objects.
 
 Helpers - Contains a helper to set times for various waits 
 
