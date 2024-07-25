@@ -11,7 +11,7 @@ Here is a detailed overview of the contents in the repository. Focus on all the 
 
 Subfolders within the fleetio-go-e2e-sampleUITests folder...
 
-Tests Folder  - Contains the main Test Class to run the iOS End to End Tests From
+Tests Folder  - Contains the main Test Class to run the iOS UI Tests From
 
 Common Folder - Contains the Base Test Class & the Test Logins 
 
