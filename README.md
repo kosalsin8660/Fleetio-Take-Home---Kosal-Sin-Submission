@@ -4,8 +4,7 @@ Instructions to Run The XCUITests
 
 1. Clone this repository on your local machine & access the fleetio-go-e2e-sample.xcodeproj project via Xcode
 2. Navigate to the fleetio-go-e2e-sampleUITests folder
-3. Find the Tests folder & run the FleetioGoUITests test class to execute the iOS UI Tests!
- 
+3. Find the Tests folder & run the FleetioGoUITests test class to execute the iOS XCUITests! A screenshot is provided below.
 
 Here is a detailed overview of the contents in the repository. Focus on all the files within the fleetio-go-e2e-sampleUITests folder, those contain the majority of my code.
 
