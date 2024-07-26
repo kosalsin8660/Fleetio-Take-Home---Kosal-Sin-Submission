@@ -32,6 +32,8 @@ The Swipe Up Extension I added is also helpful for larger lists & elements that 
 
 It helps to account for the subtle differences that may occur across different real devices & simulators, rather than using a generic swipe up.
 
+The Swipe Up extension helps to battle some challenges on the New Fuel Log form & Fuel Type list. On the Fuel Log Form you have to deal with the number keyboard blocking the New Fuel Log Form fields. On the Fuel Type List page you have to scroll all the way to the bottom to tap the Flex Fuel element. The XCUIGesture velocity needed to get there can differ slightly based on simulator or real device configuration.
+
 I also added other extensions to the code that I have written from my previous roles as an iOS SDET which will be useful in combating flakiness as the application scales.
 
 Don't hesitate to reach out with questions on this submission!
