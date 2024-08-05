@@ -15,7 +15,7 @@ class SelectFuelTypeForNewFuelLogScreen: BaseScreen {
         self.verifyNavElements()
     }
     
-    private lazy var flexFuel = app.staticTexts.matching(identifier: "Flex Fuel").firstMatch
+    private lazy var flexFuel = app.staticTexts["Flex Fuel"]
     
     func selectAndSaveGasType(gasType: String) -> AddFuelLogScreen {
         app.swipeUp(untilHittable: flexFuel)

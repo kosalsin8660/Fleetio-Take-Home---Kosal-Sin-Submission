@@ -15,18 +15,19 @@ class AddFuelLogScreen: BaseScreen {
     }
     
     
-    private lazy var pricePerGallon = app.textFields.matching(identifier: "fuel_log_price_per_gallon").firstMatch
-    private lazy var gallons = app.textFields.matching(identifier: "fuel_log_gallons").firstMatch
-    private lazy var total = app.textFields.matching(identifier: "fuel_log_total_cost").firstMatch
-    private lazy var tripMiles = app.textFields.matching(identifier: "fuel_log_total_milage").firstMatch
-    private lazy var odoMeter = app.textFields.matching(identifier: "fuel_log_odometer").firstMatch
-    private lazy var fuelTypeButton = app.buttons.matching(identifier: "Fuel Type, *").firstMatch
+    private lazy var pricePerGallon = app.textFields["fuel_log_price_per_gallon"]
+    private lazy var gallons = app.textFields["fuel_log_gallons"]
+    private lazy var total = app.textFields["fuel_log_total_cost"]
+    private lazy var tripMiles = app.textFields["fuel_log_total_milage"]
+    private lazy var odoMeter = app.textFields["fuel_log_odometer"]
+    private lazy var fuelTypeButton = app.buttons["Fuel Type, *"]
     
-    private lazy var requiredFieldsError = app.staticTexts.matching(identifier: "validation_message").firstMatch
+    private lazy var requiredFieldsError = app.staticTexts["validation_message"]
     
-    private lazy var pricePerGallonAmount = pricePerGallon.value!
-    private lazy var gallonsAmount = gallons.value!
+    private lazy var pricePerGallonAmount = pricePerGallon.value
+    private lazy var gallonsAmount = gallons.value
     
+    @discardableResult
     func fillAddNewFuelFields() -> AddFuelLogScreen {
     
         XCTAssertTrue(pricePerGallon.waitForExistence(timeout: .small))
@@ -48,13 +49,21 @@ class AddFuelLogScreen: BaseScreen {
   }
 
     func getCurrentPricePerGallonValue() -> String {
+        guard pricePerGallonAmount != nil else {
+            return ""
+        }
+        
         return toString(pricePerGallonAmount)
     }
     
     func getCurrentGallonValue() -> String {
+        guard gallonsAmount != nil else {
+            return ""
+        }
         return toString(gallonsAmount)
     }
     
+    @discardableResult
     func saveNewFuelEntry() -> VehicleFuelLogScreen {
         XCTAssertTrue(saveButton.waitForExistence(timeout: .small))
         saveButton.tap()

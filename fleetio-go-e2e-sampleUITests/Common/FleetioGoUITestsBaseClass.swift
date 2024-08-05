@@ -8,6 +8,7 @@
 import XCTest
 
 class FleetioGoUITestsBaseClass: XCTestCase {
+    
     let app = XCUIApplication()
     
     override func setUp() {
@@ -18,5 +19,4 @@ class FleetioGoUITestsBaseClass: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-    
 }

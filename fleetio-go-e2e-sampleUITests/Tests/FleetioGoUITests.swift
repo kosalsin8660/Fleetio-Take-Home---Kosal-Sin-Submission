@@ -9,62 +9,73 @@ import XCTest
 
 final class FleetioGoUITests: FleetioGoUITestsBaseClass {
     
-    var homeScreen: HomeScreen!
-    var browseScreen: BrowseScreen!
-    var vehiclesScreen: VehiclesScreen!
-    var vehicleDetailsScreen: VehicleDetailsScreen!
-    var vehicleFuelLogScreen: VehicleFuelLogScreen!
-    var addFuelLogScreen: AddFuelLogScreen!
+    /*
+     numFuelLogElementsInitial: Initial number of Fuel Logs for an existing vehicle
+     numFuelLogElementsPostSave: Number of Fuel Logs for an existing vehicle after a new Fuel Log is saved
+    */
+    var numFuelLogElementsInitial: Int = 0
+    var numFuelLogElementsPostSave: Int = 0
     
-    var numFuelElementsInitial: Int = 0
-    var numFuelElementsPostSave: Int = 0
     
+    /*
+     inputtedPricePerGallon: Price per gallon inputted into the new Fuel Log form
+     actualSavedPricePerGallon: Price per gallon that appears in the saved Fuel Log form
+    */
     var inputtedPricePerGallon: String = ""
     var actualSavedPricePerGallon: String = ""
     
+    /*
+     inputtedGallons: Gallon amount inputted into the new Fuel Log form
+     actualSavedGallons: Gallon amount that appears in the saved Fuel Log form
+    */
     var inputtedGallons: String = ""
     var actualSavedGallons: String = ""
     
         
     override func setUp() {
-        continueAfterFailure = false
         app.launch()
-        LoginScreen().verifyLoginFields()
-        homeScreen = LoginScreen().login()
+        LoginScreen()
+            .verifyLoginFields()
+            .login(with: TestUsers.defaultUser)
     }
         
     func testAddNewFuelEntryForExistingVehicle() {
-        homeScreen.verifyHomeImage()
+        HomeScreen()
+            .verifyHomeImage()
+            .tapBrowserTab()
         
-        browseScreen = homeScreen.tapBrowserTab()
+        BrowseScreen()
+            .verifyVehiclesButton()
+            .tapVehicles()
         
-        browseScreen.verifyVehiclesButton()
+        VehiclesScreen()
+            .selectVehicleName(vehicleName: "Electric Dream")
         
-        vehiclesScreen = browseScreen.tapVehicles()
+        VehicleDetailsScreen()
+            .tapFuelLog()
         
-        vehicleDetailsScreen = vehiclesScreen.selectVehicleName(vehicleName: "Electric Dream")
+        numFuelLogElementsInitial = VehicleFuelLogScreen().getFuelEntryElementCount() // Will return something like 1
         
-        vehicleFuelLogScreen = vehicleDetailsScreen.tapFuelLog()
+        VehicleFuelLogScreen()
+            .tapAddNewFuelLogButton()
         
-        numFuelElementsInitial = vehicleFuelLogScreen.verifyProperFuelEntryElementCount()
+        AddFuelLogScreen()
+            .fillAddNewFuelFields()
         
-        addFuelLogScreen = vehicleFuelLogScreen.tapAddNewFuelLogButton()
+        inputtedPricePerGallon = AddFuelLogScreen().getCurrentPricePerGallonValue()  // Will return something like 225
         
-        addFuelLogScreen = addFuelLogScreen.fillAddNewFuelFields()
+        inputtedGallons = AddFuelLogScreen().getCurrentGallonValue() // Will return something like 48
         
-        inputtedPricePerGallon = addFuelLogScreen.getCurrentPricePerGallonValue()
+        AddFuelLogScreen()
+            .saveNewFuelEntry()
         
-        inputtedGallons = addFuelLogScreen.getCurrentGallonValue()
+        numFuelLogElementsPostSave = VehicleFuelLogScreen().verifyProperFuelEntryElementCount()
         
-        vehicleFuelLogScreen = addFuelLogScreen.saveNewFuelEntry()
+        actualSavedPricePerGallon = VehicleFuelLogScreen().getSavedPerGallonValues() // Will return something like $225
         
-        numFuelElementsPostSave = vehicleFuelLogScreen.verifyProperFuelEntryElementCount()
+        actualSavedGallons = VehicleFuelLogScreen().getSavedGallonValues() // Will return something like 48
         
-        actualSavedPricePerGallon = vehicleFuelLogScreen.getSavedPerGallonValues()
-        
-        actualSavedGallons = vehicleFuelLogScreen.getSavedGallonValues()
-        
-        XCTAssertEqual(numFuelElementsPostSave, numFuelElementsInitial + 1)
+        XCTAssertEqual(numFuelLogElementsPostSave, numFuelLogElementsInitial + 1)
         
         XCTAssertTrue(actualSavedPricePerGallon.hasSuffix(inputtedPricePerGallon))
         
@@ -72,22 +83,25 @@ final class FleetioGoUITests: FleetioGoUITestsBaseClass {
     }
     
     func testRequiredFieldsNotFilledNewFuelEntry() {
-        homeScreen.verifyHomeImage()
+        HomeScreen()
+            .verifyHomeImage()
+            .tapBrowserTab()
         
-        browseScreen = homeScreen.tapBrowserTab()
+        BrowseScreen()
+            .verifyVehiclesButton()
+            .tapVehicles()
         
-        browseScreen.verifyVehiclesButton()
+        VehiclesScreen()
+            .selectVehicleName(vehicleName: "Electric Dream")
         
-        vehiclesScreen = browseScreen.tapVehicles()
+        VehicleDetailsScreen()
+            .tapFuelLog()
         
-        vehicleDetailsScreen = vehiclesScreen.selectVehicleName(vehicleName: "Electric Dream")
+        VehicleFuelLogScreen()
+            .tapAddNewFuelLogButton()
         
-        vehicleFuelLogScreen = vehicleDetailsScreen.tapFuelLog()
-        
-        addFuelLogScreen = vehicleFuelLogScreen.tapAddNewFuelLogButton()
-        
-        addFuelLogScreen.saveNewFuelEntryWithoutFillingRequiredFields()
-        
+        AddFuelLogScreen()
+            .saveNewFuelEntryWithoutFillingRequiredFields()
     }
     
     

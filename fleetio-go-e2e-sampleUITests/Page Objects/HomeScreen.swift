@@ -14,12 +14,14 @@ class HomeScreen: BaseScreen {
         self.verifyNavElements()
     }
     
-    private lazy var homeImage = app.images.matching(identifier: "house.fill").firstMatch
+    private lazy var homeImage = app.images["house.fill"]
     
-    func verifyHomeImage() {
+    func verifyHomeImage() -> HomeScreen {
         XCTAssertTrue(homeImage.waitForExistence(timeout: .small))
+        return self
     }
     
+    @discardableResult
     func tapBrowserTab() -> BrowseScreen  {
         browseButton.tap()
         return BrowseScreen()

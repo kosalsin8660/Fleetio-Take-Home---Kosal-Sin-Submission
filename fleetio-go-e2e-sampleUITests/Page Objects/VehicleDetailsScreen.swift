@@ -14,8 +14,9 @@ class VehicleDetailsScreen: BaseScreen {
         self.verifyNavElements()
     }
     
-    private lazy var fuelLogButton = app.buttons.matching(identifier: "vehicle_option_Fuel Log").firstMatch
+    private lazy var fuelLogButton = app.buttons["vehicle_option_Fuel Log"]
     
+    @discardableResult
     func tapFuelLog() -> VehicleFuelLogScreen {
         XCTAssertTrue(fuelLogButton.waitForExistence(timeout: .small))
         fuelLogButton.tap()

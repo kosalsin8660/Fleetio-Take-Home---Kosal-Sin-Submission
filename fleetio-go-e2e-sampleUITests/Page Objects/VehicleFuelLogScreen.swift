@@ -14,10 +14,10 @@ class VehicleFuelLogScreen: BaseScreen {
         self.verifyNavElements()
     }
     
-    private lazy var addNewFuel = app.buttons.matching(identifier: "fuel_log_new_entry").firstMatch
+    private lazy var addNewFuel = app.buttons["fuel_log_new_entry"]
     private lazy var allFuelElements = app.buttons.softMatchingIdentifier(substring: "fuel_log_list_item")
-    private lazy var topFuelElement = app.buttons.softMatchingIdentifier(substring: "fuel_log_list_item").first!
     
+    @discardableResult
     func tapAddNewFuelLogButton() -> AddFuelLogScreen {
         XCTAssertTrue(addNewFuel.waitForExistence(timeout: .small))
         addNewFuel.tap()
@@ -27,10 +27,19 @@ class VehicleFuelLogScreen: BaseScreen {
     // Returns a count of fuel elements on each call
     // Verfies that the most recently addded Fuel Element has all the fields by verifying the number of statictexts which is 14
     func verifyProperFuelEntryElementCount() -> Int {
+        guard let topFuelElement = app.buttons.softMatchingIdentifier(substring: "fuel_log_list_item").first else {
+            return 0
+        }
+        
         XCTAssertTrue(topFuelElement.waitForExistence(timeout: .small))
         let numFuelElementsValueFields = topFuelElement.staticTexts.count
         let numAllFuelElements = allFuelElements.count
         XCTAssertEqual(numFuelElementsValueFields, 14)
+        return numAllFuelElements
+    }
+    
+    func getFuelEntryElementCount() -> Int {
+        let numAllFuelElements = allFuelElements.count
         return numAllFuelElements
     }
     
@@ -40,6 +49,10 @@ class VehicleFuelLogScreen: BaseScreen {
     // The below methods gets the values that were saved for Per Gallon & Gallon & asserts to make sure they are as expected
     
     func getSavedPerGallonValues() -> String {
+        guard let topFuelElement = app.buttons.softMatchingIdentifier(substring: "fuel_log_list_item").first else {
+            return "No Matching Saved Value"
+        }
+        
         XCTAssertTrue(topFuelElement.waitForExistence(timeout: .small))
         let perGallonElement = topFuelElement.staticTexts.element(boundBy: 8)
         let perGallonElementValue = perGallonElement.label
@@ -51,6 +64,10 @@ class VehicleFuelLogScreen: BaseScreen {
     }
     
     func getSavedGallonValues() -> String {
+        guard let topFuelElement = app.buttons.softMatchingIdentifier(substring: "fuel_log_list_item").first else {
+            return "No Matching Saved Value"
+        }
+        
         let gallonElement = topFuelElement.staticTexts.element(boundBy: 2)
         let gallonElementValue = gallonElement.label
         let gallonSecondElement = topFuelElement.staticTexts.element(boundBy: 3)

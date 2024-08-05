@@ -15,12 +15,14 @@ class BrowseScreen: BaseScreen {
     }
     
 
-    private lazy var browseListItemVehicles = app.buttons.matching(identifier: "browse_list_item_Vehicles").firstMatch
+    private lazy var browseListItemVehicles = app.buttons["browse_list_item_Vehicles"]
     
-    func verifyVehiclesButton() {
+    func verifyVehiclesButton() -> BrowseScreen {
         XCTAssertTrue(browseListItemVehicles.waitForExistence(timeout: .small))
+        return self
     }
     
+    @discardableResult
     func tapVehicles() -> VehiclesScreen {
         browseListItemVehicles.tap()
         return VehiclesScreen()

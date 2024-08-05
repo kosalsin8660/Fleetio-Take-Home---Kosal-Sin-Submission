@@ -14,10 +14,17 @@ class VehiclesScreen: BaseScreen {
         self.verifyNavElements()
     }
     
+    @discardableResult
     func selectVehicleName(vehicleName: String) -> VehicleDetailsScreen {
-        let vehicleToSelect = app.buttons.softMatchingLabel(substring: vehicleName).first!
-        XCTAssertTrue(vehicleToSelect.waitForExistence(timeout: .medium))
+        guard let vehicleToSelect = app.buttons.softMatchingLabel(substring: vehicleName).first else {
+            XCTFail("Vehicle was not found")
+            return VehicleDetailsScreen()
+        }
+        
+        XCTAssertTrue(vehicleToSelect.waitForExistence(timeout: .small))
+        app.swipeUp(untilHittable: vehicleToSelect)
         vehicleToSelect.tap()
+        
         return VehicleDetailsScreen()
     }
 }
